@@ -1,0 +1,5 @@
+#summary Introductory page on how to configure OpenMSC
+
+= Introduction =
+
+This section explains how to configure OpenMSC
