@@ -13,4 +13,10 @@ Add your content here.
 
 == Use-Cases ==
 
-OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failures.
+OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failure use-cases. A use-case leverages the block of signals command
+
+{{{
+--- [ label = "Success" ]
+}}}
+
+where the label *must* be specified with the word _Success_, as shown above.
