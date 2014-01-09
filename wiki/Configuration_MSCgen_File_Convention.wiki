@@ -14,3 +14,5 @@ Add your content here.
 == Use-Cases ==
 
 OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failures.
+
+<g:plusone size="medium"></g:plusone>
