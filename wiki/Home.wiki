@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Entry page to OpenMSC wiki.
 
 = OpenMSC Wiki =
 At the moment this wiki is the only documentation available for OpenMSC.
