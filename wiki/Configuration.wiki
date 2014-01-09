@@ -1,5 +1,9 @@
 #summary Introductory page on how to configure OpenMSC
 <g:plusone size="medium"></g:plusone>
-= Introduction =
+= Configuration of OpenMSC =
 
-This section explains how to configure OpenMSC
+This section explains how to configure OpenMSC. The emulator requires two configuration files, i.e.:
+ * openmsc.cfg
+ * openmsc.msc
+
+The MSCgen file is described in [here hrere]. In order to provide environmental details, openmsc.cfg allows the user to set variables, e.g., number of UEs and BSs.
