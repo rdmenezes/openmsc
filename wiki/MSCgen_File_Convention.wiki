@@ -1,4 +1,5 @@
 #summary Explanation of mscgen file convention
+<wiki:toc max_depth="3" />
 
 = Introduction = 
 
