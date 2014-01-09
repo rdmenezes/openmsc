@@ -1,5 +1,5 @@
 #summary Explanation of mscgen file convention
-<wiki:toc max_depth="3" />
+<wiki:toc />
 <g:plusone size="medium"></g:plusone>
 = Introduction = 
 
