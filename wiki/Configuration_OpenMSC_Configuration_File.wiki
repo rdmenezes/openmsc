@@ -3,3 +3,5 @@
 
 = Introduction =
 tba
+
+<g:plusone size="medium"></g:plusone>
