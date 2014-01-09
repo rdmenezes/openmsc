@@ -1,0 +1,15 @@
+#summary Explanation of mscgen file convention
+
+= Introduction = 
+
+As the mscgen tool can be used to generate a graphical illustration of the use-cases, the mscgen file convention must not be changed. Therefore, all OpenMSC specific information needed to be added to the mscgen file must follow the mscgen file convention.
+
+= Structure =
+
+== Network Elements ==
+
+Add your content here.
+
+== Use-Cases ==
+
+OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failures.
