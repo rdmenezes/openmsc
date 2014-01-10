@@ -1,6 +1,7 @@
 #summary Explanation of how EventIDs are structured
 
-= Introduction =
+= Strucuture of a Single Event ID =
+The EventID is a single string in the UDP payload which is concatenated from the following fields:
 
 || *Field* || Source || Destination || Protocol Type || Primitive Name || Information Element || IE Value ||
-|| *Size* || 8 || 8 || 3 || 3 || 4 || 5 ||
+|| *Size* || 5 || 5 || 2 || 2 || 2 || 3 ||
