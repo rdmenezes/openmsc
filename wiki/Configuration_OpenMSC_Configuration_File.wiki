@@ -2,4 +2,15 @@
 <wiki:toc />
 <g:plusone size="medium"></g:plusone>
 = Introduction =
-tba
+In order to configure OpenMSC, the libconfig library is leveraged using the C++ API.
+
+An example configuration file is provided in the doc/example SVN folder.
+
+= Mandatory Fields =
+
+* numOfUesPerBs
+* numOfBss
+* cycleTime
+
+
+= Information Elements and Their Values =
