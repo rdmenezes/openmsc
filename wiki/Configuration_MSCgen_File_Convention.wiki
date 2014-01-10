@@ -9,7 +9,7 @@ As the mscgen tool can be used to generate a graphical illustration of the use-c
 
 == Network Elements ==
 
-Add your content here.
+Network elements are the communication entities in the MSC. Each network element *must* use a unique name.
 
 == Use-Cases ==
 
@@ -20,3 +20,6 @@ OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n
 }}}
 
 where the label *must* be specified with the word _Success_, as shown above.
+
+== Communication Descriptor ==
+tba
