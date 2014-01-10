@@ -5,3 +5,5 @@ The EventID is a single string in the UDP payload which is concatenated from the
 
 || *Field* || Source || Destination || Protocol Type || Primitive Name || Information Element || IE Value ||
 || *Size* || 5 || 5 || 2 || 2 || 2 || 3 ||
+
+The total length is 19 which can parsed as an integer using unsigned long long in C++.
