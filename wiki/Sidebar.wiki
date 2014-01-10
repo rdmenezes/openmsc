@@ -3,3 +3,4 @@
 * [Configuration OpenMSC Configuration]
   * [Configuration_MSCgen_File_Convention MSCgen File Convention]
   * [Configuration_OpenMSC_Configuration_File OpenMSC Configuration File]
+* [EventID_Structure EventID Structure]
