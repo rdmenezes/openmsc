@@ -13,13 +13,7 @@ Network elements are the communication entities in the MSC. Each network element
 
 == Use-Cases ==
 
-OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failure use-cases. A use-case leverages the block of signals command
-
-{{{
---- [ label = "Success" ]
-}}}
-
-where the label *must* be specified with the word _Success_, as shown above.
+OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failure use-cases. A use-case leverages the block of signals command `--- [ label = "Success" ]` where the label *must* be specified with the word _Success_.
 
 == Communication Descriptor ==
 tba
