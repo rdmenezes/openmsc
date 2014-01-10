@@ -16,4 +16,6 @@ Network elements are the communication entities in the MSC. Each network element
 OpenMSC expects exactly one _Success_ use-case and allows the user to specify _n_ failure use-cases. A use-case leverages the block of signals command `--- [ label = "Success" ]` where the label *must* be specified with the word _Success_.
 
 == Communication Descriptor ==
-tba
+A communication descriptor defines a single message flow from a source to a destination network element identified by a protocol, a primitive and a list of information elements and their values.
+
+In other words, each line for a use-case in the openmsc.msc file is an individual communication descriptor.
