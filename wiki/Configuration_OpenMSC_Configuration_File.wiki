@@ -8,9 +8,9 @@ An example configuration file is provided in the doc/example SVN folder.
 
 = Mandatory Fields =
 
-* numOfUesPerBs
-* numOfBss
-* cycleTime
+  * numOfUesPerBs
+  * numOfBss
+  * cycleTime
 
 
 = Information Elements and Their Values =
