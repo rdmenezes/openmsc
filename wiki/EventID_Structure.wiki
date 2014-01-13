@@ -7,3 +7,20 @@ The EventID is a single string in the UDP payload which is concatenated from the
 || *Size* || 5 || 5 || 2 || 2 || 2 || 3 ||
 
 The total length is 19 which can parsed as an integer using unsigned long long in C++.
+
+= Source and Destination ID Creation =
+Both source and destination IDs can represent an UE, a BS or another network element such as MME, HSS or P-GW (when talking in 3GPP language). As the number of UEs and BSs can be configured in openmsc.cfg and openmsc.msc only provides the communication between a single UE, BS and any other network element, the unique numeric representation of an UE and BS ID is implemented as follows.
+
+== User Equipment Identifier ==
+The UE ID is a concatenation of BS ID and UE ID. OpenMSC generates the UE ID by:
+
+ID,,ue,, = BS(m) × 100 + UE(n)
+
+with _1 <= m <= numOfBss_ and _1 <= n <= numOfUesPerBs_ with _n_ and _m_ are integers. For instance, if 2 BSs and 5 UEs were set in openmsc.cfg, ID,,ue,, for UE(2) attached to BS(1) = `00102`.
+
+== Base-Station Identifier ==
+Following a similar approach as for ID,,ue,,, the identifier for a base-station, ID,,bs,,, is implemented as follows:
+
+ID,,bs,, = BS(m) × 100
+
+with _1 <= m <= numOfBss_. Using the same configuration as for the UE ID above: ID,,bs,, for BS(2) is `00200`.
