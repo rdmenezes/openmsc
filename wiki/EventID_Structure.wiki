@@ -2,26 +2,37 @@
 <wiki:toc />
 <g:plusone size="medium"></g:plusone>
 = Structure of a Single Event ID =
-The EventID is a single string in the UDP payload which is concatenated from the following fields:
+a particular communication
+descriptor is represented as a single numeric EventID due to the requirement of most data mining algorithms which are able to work with numbers only. Therefore, OpenMSC translates each communication descriptor entity into a single unique integer representation, then concatenates these representations in a standardised way, as shown in Table I.
 
 || *Field* || Source || Destination || Protocol Type || Primitive Name || Information Element || IE Value ||
 || *Size* || 5 || 5 || 2 || 2 || 2 || 3 ||
 
-The total length is 19 which can parsed as an integer using unsigned long long in C++.
+Each communication descriptor has a source NE and a
+destination NE which exchange information using primitives
+that are standardised. As primitive names can be the same
+across multiple protocols, OpenMSC distinguishes between the
+protocol type and primitive name. Each primitive has various
+Information Elements (IEs) which hold particular values. The
+total length of the generated EventID is 19 due to the maxi-
+mal length of the data type unsigned long long in all
+programming languages.
 
-= Source and Destination ID Creation =
-Both source and destination IDs can represent an UE, a BS or another network element such as MME, HSS or P-GW (when talking in 3GPP language). As the number of UEs and BSs can be configured in openmsc.cfg and openmsc.msc only provides the communication between a single UE, BS and any other network element, the unique numeric representation of an UE and BS ID is implemented as follows.
+The source and destination NEs are represented by a five
+digit long integer values. The integer representations are being
+allocated on an iterative basis where an unknown NE will
+receive a number which is incremented by one, when compared
+to its predecessor NE. The only exceptions are UEs and BSs,
+as they are treated differently by OpenMSC.
 
-== User Equipment Identifier ==
-The UE ID is a concatenation of BS ID and UE ID. OpenMSC generates the UE ID by:
+In case of a BS, OpenMSC calculates a BS EventID, ID,,bs,,, by:
 
-ID,,ue,, = BS(m) × 100 + UE(n)
+ID,,bs,, = 100 × BS(m)
 
-with _1 <= m <= numOfBss_ and _1 <= n <= numOfUesPerBs_ with _n_ and _m_ are integers. For instance, if 2 BSs and 5 UEs were set in openmsc.cfg, ID,,ue,, for UE(2) attached to BS(1) = `00102`.
+with m ∈ Z and 0 < m. For instance, if the total number of BS,,s,,, n,,bs,,, equals 50, the five digit long numerical representation of the second BS (m = 2) is `00200`. The numerical UE representation is calculated as follows:
 
-== Base-Station Identifier ==
-Following a similar approach as for ID,,ue,,, the identifier for a base-station, ID,,bs,,, is implemented as follows:
+ID,,ue,, = 100 · BS(m) + UE(n)
 
-ID,,bs,, = BS(m) × 100
+with m, n ∈ Z and 0 < m, n. For m = 2 and n = 45, the corresponding UE identifier ID,,ue,, would be `00245`. All other NEs receive a unique integer in the range of 1 through 99. This ensures that the five digit long numerical representation of a NE is always unique.
 
-with _1 <= m <= numOfBss_. Using the same configuration as for the UE ID above: ID,,bs,, for BS(2) is `00200`.
+The only limitation by generating the EventID as described above is the total number of NEs, primitives and IEs that can be used in the entire emulation while ensuring a unique integer representation for every piece of information. However, with 999 BSs, 99 UEs at each BS, 99 non BS or UE NEs, it is ensured that OpenMSC still provides enough flexibility to generate data-streams emulating rather large networks. Obviously, OpenMSC users could implement their own data-type of length larger than 19, allowing everyone to arbitrarily increase the network size defined in the MSC. However, this is not the objective of OpenMSC.
