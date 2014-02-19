@@ -1,0 +1,23 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+OpenMSC provides four levels of debug output which is written to stdout, i.e.:
+ * `ERROR`
+ * `INFO`
+ * `DEBUG`
+ * `TRACE`
+
+= Available Debug Levels =
+tba
+== `ERROR` ==
+tba
+
+== `INFO` ==
+tba
+
+== `DEBUG` ==
+tba
+
+== `TRACE` ==
+tba
