@@ -3,6 +3,7 @@
 * [Configuration OpenMSC Configuration]
   * [Configuration_MSCgen_File_Convention MSCgen File Convention]
   * [Configuration_OpenMSC_Configuration_File OpenMSC Configuration File]
-  * [Configuration_Debug_Levels Debug Levels] 
+  * [Configuration_Debug_Levels Debug Levels]
+  * [Configuration_Distributions Distributions]  
 
 * [EventID_Structure EventID Structure]
