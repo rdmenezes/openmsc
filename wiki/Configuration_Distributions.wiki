@@ -1,5 +1,5 @@
 #summary Explanation of distributions and the parameters which can be set in openmsc.cfg
-
+<wiki:toc />
 = Introduction =
 
 OpenMSC provides several distributions from which the user can select:
@@ -17,8 +17,15 @@ The distributions are used to determine the UE starting times as well as for the
 == Gaussian (Normal) ==
 To use the gaussian distribution the user is asked to set the distribution's mean and standard deviation.
 
+The figure below shows the start time for 50 UEs per BS and 30 BS. The Gaussian distribution was configured with mean 3.0s and a standard deviation of 1s.
+[https://googledrive.com/host/0B0ig-Rw0sniLUF92Nlp1RncxalU/gaussian_Mean-3_Sigma-1.png] 
+
 More information about how the gaussian distribution is implemented in Boost [http://www.boost.org/doc/libs/1_54_0/libs/math/doc/html/math_toolkit/dist_ref/dists/normal_dist.html follow this link].
+
 == Gamma / Erlang ==
 OpenMSC requests two parameters to set for both distributions, i.e., alpha (scale) and beta (shape). The only difference between gamma and erlang is that erlang only accepts integers for alpha and beta.
+
+The figure below shows the calculated start time for 50 UEs per BS and 30 BSs in total. The Gamma distribution parameters were alpha = 0.75 and beta = 2.
+[https://googledrive.com/host/0B0ig-Rw0sniLUF92Nlp1RncxalU/gamma_Alpha-0.75_Beta-2.png]
 
 More info about how this distribution is implemented in Boost [http://www.boost.org/doc/libs/1_54_0/libs/math/doc/html/math_toolkit/dist_ref/dists/gamma_dist.html follow this link].
