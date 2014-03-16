@@ -1,0 +1,9 @@
+enum latencyDistributionEnum {
+	CONSTANT = 1,
+	EXPONENTIAL,
+	UNIFORM_REAL,
+	UNIFORM_INTEGER,
+	GAMMA,
+	ERLANG,
+	GAUSSIAN
+};

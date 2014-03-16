@@ -1,0 +1,34 @@
+####################################################
+1) Required Libraries
+
+$ apt-get install libboost-all-dev liblog4cxx10-dev libconfig++8-dev build-essential
+
+Note, OpenMSC is only compilable if you stick to the following library requirements:
+libboost => 1.48
+libconfig => 8
+
+Also pay attention to install libconfig++ and not libconfig.
+
+####################################################
+2) Compiling Binaries
+
+$ cd src/
+$ make all
+
+####################################################
+3) Run Binaries
+
+The make file creates two binaries in SVN/bin: the OpenMSC and a receiver dummy. First copy the example configuration files to the SVN/bin directory:
+$ cd ../bin
+$ cp ../doc/example/openmsc.msc .
+$ cp ../doc/example/openmsc.cfg .
+
+If both binaries are located on the same machine just invoke:
+
+$ ./receiverDummy 8000
+
+in one terminal and 
+
+$ ./openmsc -i 127.0.0.1 -p 8000
+
+in another one.
