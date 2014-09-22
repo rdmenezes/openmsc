@@ -27,7 +27,7 @@ $ cp ../doc/example/openmsc.cfg .
 
 If both binaries are located on the same machine just invoke:
 
-$ ./receiverDummy 8000
+$ ./receiverDummyTcp 8000 || ./receiverDummyUdp 8000
 
 in one terminal and 
 
